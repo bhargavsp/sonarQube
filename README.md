@@ -37,4 +37,22 @@ Refer to this link also https://devopscube.com/setup-and-configure-sonarqube-on-
 |command|usage|
 |:---:|:---:|
 Install java from amazon linux website | 
-installing sonarQube | 
+installing sonarQube | install zip from website
+unzip sonar |
+mv sonarqube-9.6.1 sonarqube | change the name of sonarqube for further use and simplicity
+useradd sonar |
+visudo | give sonar sudoers priviliges enter `sonar ALL=(ALL) NOPASSWD: ALL`(case sensitive) below root  ALL=(ALL)
+chown -R sonar:sonar /opt/sonarqube/ ***and*** chmod -R 775 /opt/sonarqube/ | change the user, group permissions and the user, group, other level permissions  
+su - sonar | `-` is manditory as we are logging into the sonar user completely
+cd /opt/sonarqube/linux | navigate to the folder
+sh sonar.sh start | start the sonar server on linux environment
+open port 9000 in AWS|
+
+
+
+## when we create an sonar user after installing the sonarqube in the linux server
+1. SonarQube starts an Elasticsearch process and the same account that is running SonarQube itself will be used for the Elasticsearch process.
+2. Since Elasticsearch cannot be run as root, You must choose some other, non-root account with which to run SonarQube, preferably an account dedicated to the purpose.
+3. Elasticsearch is a NoSQL database. That means it stores data in an unstructured way and that you cannot use SQL to query it
+4. Elasticsearch provides extensive APIs for performing searches and aggregations on your data set out of the box
+5. You want Elasticsearch when you're doing a lot of text search, where traditional RDBMS databases are not performing really well (poor configuration, acts as a black-box, poor performance). Elasticsearch is highly customizable, extendable through plugins. You can build a robust search without much knowledge quite fast.
