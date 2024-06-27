@@ -55,3 +55,11 @@ default system administrator credentials | admin/admin
 3. Elasticsearch is a NoSQL database. That means it stores data in an unstructured way and that you cannot use SQL to query it
 4. Elasticsearch provides extensive APIs for performing searches and aggregations on your data set out of the box
 5. You want Elasticsearch when you're doing a lot of text search, where traditional RDBMS databases are not performing really well (poor configuration, acts as a black-box, poor performance). Elasticsearch is highly customizable, extendable through plugins. You can build a robust search without much knowledge quite fast.
+
+## in real time which IP we configure in the pom.xml file to configure the sonarqube
+We use the private IP address instead of the public IP address
+
+## commands in sonar
+|command|usage|
+|:---:|:---:|
+mvn sonar:sonar | first sonar represents the plugin name and second sonar after colan represents the goal name
