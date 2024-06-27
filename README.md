@@ -36,19 +36,18 @@ Refer to https://mithuntechnologies-devops.blogspot.com/search/label/SonarQube%2
 Refer to this link also https://devopscube.com/setup-and-configure-sonarqube-on-linux/
 |command|usage|
 |:---:|:---:|
-Install java from amazon linux website | 
-installing sonarQube | install zip from website
-unzip sonar |
+Install java from amazon linux website | https://docs.aws.amazon.com/corretto/latest/corretto-11-ug/amazon-linux-install.html
+installing sonarQube | install zip from website, wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-9.6.1.59531.zip
+install wget and unzip | 
 mv sonarqube-9.6.1 sonarqube | change the name of sonarqube for further use and simplicity
-useradd sonar |
-visudo | give sonar sudoers priviliges enter `sonar ALL=(ALL) NOPASSWD: ALL`(case sensitive) below root  ALL=(ALL)
+useradd sonar | add the user as even the sonar uses the Elasticsearch which cant be performed at the linux root level
+visudo | give sonar sudoers priviliges enter **`sonar ALL=(ALL) NOPASSWD: ALL`**(case sensitive) below root  ALL=(ALL)
 chown -R sonar:sonar /opt/sonarqube/ ***and*** chmod -R 775 /opt/sonarqube/ | change the user, group permissions and the user, group, other level permissions  
-su - sonar | `-` is manditory as we are logging into the sonar user completely
-cd /opt/sonarqube/linux | navigate to the folder
+cd su - sonar | `-` is manditory as we are logging into the sonar user completely
+cd /opt/sonarqube/bin/linux | navigate to the folder
 sh sonar.sh start | start the sonar server on linux environment
-open port 9000 in AWS|
-
-
+open port 9000 in AWS SG group |
+default system administrator credentials | admin/admin
 
 ## when we create an sonar user after installing the sonarqube in the linux server
 1. SonarQube starts an Elasticsearch process and the same account that is running SonarQube itself will be used for the Elasticsearch process.
