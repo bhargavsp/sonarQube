@@ -66,3 +66,8 @@ You can generate new tokens at User > My Account > Security
 |command|usage|
 |:---:|:---:|
 mvn sonar:sonar | first sonar represents the plugin name and second sonar after colan represents the goal name
+
+## run the sonarQube for the nodeJs application
+First configure the sonar URL and the login token in teh sonar-properities.js file and then execute the following commands
+![image](https://github.com/bhargavsp/sonarQube/assets/45779321/b406a2e0-ecb3-4270-96b3-780ea0f584fb)
+
