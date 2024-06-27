@@ -59,6 +59,9 @@ default system administrator credentials | admin/admin
 ## in real time which IP we configure in the pom.xml file to configure the sonarqube
 We use the private IP address instead of the public IP address
 
+## how to generate the sonarQube token to access it in pom.xml apart from giving username and password
+You can generate new tokens at User > My Account > Security
+
 ## commands in sonar
 |command|usage|
 |:---:|:---:|
