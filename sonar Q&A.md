@@ -1,5 +1,7 @@
 # sonar Q&A
 
+## can we execute the sonar for standalone and the Enterprise web application
+
 ## ERRORS
 |Error|solution|
 |:---:|:---:|
