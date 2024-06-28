@@ -43,6 +43,7 @@ mv sonarqube-9.6.1 sonarqube | change the name of sonarqube for further use and 
 useradd sonar | add the user as even the sonar uses the Elasticsearch which cant be performed at the linux root level
 visudo | give sonar sudoers priviliges enter **`sonar ALL=(ALL) NOPASSWD: ALL`**(case sensitive) below root  ALL=(ALL)
 chown -R sonar:sonar /opt/sonarqube/ ***and*** chmod -R 775 /opt/sonarqube/ | change the user, group permissions and the user, group, other level permissions  
+To skip the below steps of start the sonar.sh file all the time `set the sonarQube as a service in init.d | refer to this link to add the sonarQube as a service https://docs.sonarsource.com/sonarqube/latest/setup-and-upgrade/configure-and-operate-a-server/operating-the-server/#running-sonarqube-as-service-linux-initd 
 cd su - sonar | `-` is manditory as we are logging into the sonar user completely
 cd /opt/sonarqube/bin/linux | navigate to the folder
 sh sonar.sh start | start the sonar server on linux environment
