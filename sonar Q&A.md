@@ -5,4 +5,4 @@
 ## ERRORS
 |Error|solution|
 |:---:|:---:|
-if we are getting error starting sonar or taking time, timeout | delete the temp directory at the root level and stop and start the sonar again 
+if we are getting error starting sonar or taking time, timeout | delete the temp directory at the root level re-assign the chmod and chown for the sonarQube folder and stop and start the sonar again 
